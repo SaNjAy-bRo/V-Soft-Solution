@@ -101,9 +101,6 @@ export default function Navbar() {
               <span className="font-extrabold text-lg sm:text-xl text-white tracking-tight group-hover:text-brand-accent transition-colors">
                 V Soft <span className="text-brand-accent">Solution</span>
               </span>
-              <span className="text-[9px] font-bold text-gray-300 tracking-widest uppercase -mt-1">
-                LLC • ENTERPRISE CONSULTING
-              </span>
             </div>
           </Link>
 
@@ -186,16 +183,6 @@ export default function Navbar() {
               Contact
             </Link>
           </nav>
-
-          {/* CTA Right (Clean without AI sparkles) */}
-          <div className="hidden lg:flex items-center gap-4">
-            <button
-              onClick={() => openModal()}
-              className="px-6 py-2.5 rounded-xl btn-gradient text-white text-xs font-bold uppercase tracking-wider shadow-glow hover:scale-[1.02] active:scale-[0.98] transition-all"
-            >
-              Book Free Consultation
-            </button>
-          </div>
 
           {/* Mobile Menu Trigger */}
           <div className="flex lg:hidden items-center gap-3">

@@ -212,14 +212,6 @@ export default function HomePage() {
       <section className="relative min-h-[85vh] hero-bg-image pt-28 pb-12 md:pt-32 md:pb-16 flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="max-w-3xl space-y-5">
-            {/* Clean Enterprise Badge (No AI Sparkles Icon) */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-xl">
-              <Building2 className="w-4 h-4 text-brand-accent" />
-              <span className="text-xs font-bold uppercase tracking-wider text-white">
-                US Enterprise Technology & Consulting Partner
-              </span>
-            </div>
-
             {/* Proportioned Headline */}
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
               Transforming Enterprises Through{" "}
