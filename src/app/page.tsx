@@ -92,37 +92,37 @@ export default function HomePage() {
       title: "15+ Years Industry Leadership",
       desc: "Senior partner-led engagements with deep domain expertise across North American and global enterprise markets.",
       icon: Award,
-      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600",
+      image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=800",
     },
     {
       title: "Measurable Revenue Impact",
       desc: "Every engagement is anchored to verifiable business metrics—ROAS, Cost-Per-Acquisition, and operational savings.",
       icon: TrendingUp,
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
     },
     {
       title: "Enterprise Data Protection",
       desc: "SOC 2 Type II compliant standards, HIPAA-ready protocols, and strict ISO 27001 data governance.",
       icon: Lock,
-      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=600",
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=800",
     },
     {
       title: "AI Innovation Pioneers",
       desc: "Early deployment of proprietary generative models, RAG vector architectures, and autonomous agent systems.",
       icon: Zap,
-      image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800",
+      image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800",
     },
     {
       title: "Scalable Cloud Engineering",
       desc: "Cloud-native microservice architectures engineered to support millions of concurrent interactions effortlessly.",
       icon: Globe2,
-      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=600",
+      image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=800",
     },
     {
       title: "24/7 Account & Tech Support",
       desc: "Dedicated senior consultants and 24/7 infrastructure monitoring for operational peace of mind.",
       icon: Headphones,
-      image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=600",
+      image: "https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&q=80&w=800",
     },
   ];
 
