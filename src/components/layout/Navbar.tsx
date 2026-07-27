@@ -89,7 +89,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo Left */}
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center gap-3 group shrink-0">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-primary to-brand-accent p-0.5 shadow-glow transition-transform duration-300 group-hover:scale-105">
               <div className="w-full h-full bg-brand-dark rounded-[10px] flex items-center justify-center">
                 <span className="font-black text-xl text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">
@@ -105,7 +105,7 @@ export default function Navbar() {
           </Link>
 
           {/* Clean Nav Center */}
-          <nav className="hidden lg:flex items-center gap-2 xl:gap-4">
+          <nav className="hidden lg:flex items-center justify-center gap-2 xl:gap-4 flex-1">
             <Link
               href="/"
               className={`px-4 py-2 text-sm font-semibold rounded-xl transition-all ${
@@ -185,13 +185,7 @@ export default function Navbar() {
           </nav>
 
           {/* Mobile Menu Trigger */}
-          <div className="flex lg:hidden items-center gap-3">
-            <button
-              onClick={() => openModal()}
-              className="px-3.5 py-1.5 rounded-lg btn-gradient text-white text-xs font-bold"
-            >
-              Book Call
-            </button>
+          <div className="flex lg:hidden items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 text-white hover:text-brand-accent focus:outline-none"
@@ -240,17 +234,6 @@ export default function Navbar() {
           >
             Contact
           </Link>
-          <div className="pt-2">
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                openModal();
-              }}
-              className="w-full py-3 rounded-xl btn-gradient text-white text-center font-semibold text-sm flex items-center justify-center gap-2"
-            >
-              Book Free Consultation <ArrowRight className="w-4 h-4" />
-            </button>
-          </div>
         </div>
       )}
     </header>
