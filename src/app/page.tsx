@@ -110,7 +110,7 @@ export default function HomePage() {
       title: "AI Innovation Pioneers",
       desc: "Early deployment of proprietary generative models, RAG vector architectures, and autonomous agent systems.",
       icon: Zap,
-      image: "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&q=80&w=600",
+      image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800",
     },
     {
       title: "Scalable Cloud Engineering",
@@ -375,11 +375,14 @@ export default function HomePage() {
                 >
                   <div className="space-y-4">
                     {/* High-Res Photography Header */}
-                    <div className="relative h-44 overflow-hidden">
+                    <div className="relative h-44 overflow-hidden bg-gradient-to-br from-brand-dark via-slate-900 to-brand-dark">
                       <img
                         src={item.image}
                         alt={item.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        onError={(e) => {
+                          (e.currentTarget as HTMLImageElement).style.opacity = '0';
+                        }}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent" />
                       <div className="absolute bottom-3 left-4 w-10 h-10 rounded-xl bg-brand-dark/90 backdrop-blur-md border border-white/10 text-brand-accent flex items-center justify-center group-hover:bg-brand-primary group-hover:text-white transition-colors">
