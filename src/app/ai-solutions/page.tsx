@@ -175,6 +175,78 @@ export default function AISolutionsPage() {
         </div>
       </section>
 
+      {/* INNOVATIVE SECTION 1: AI ARCHITECTURE & CORE ENGINES */}
+      <section className="py-24 bg-brand-dark text-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column: Image Card with Glow & Floating Stats */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-brand-primary to-brand-accent rounded-3xl blur opacity-30 group-hover:opacity-75 transition duration-1000 group-hover:duration-200" />
+              <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-brand-dark">
+                <img
+                  src="/images/ai-architecture-engine.png"
+                  alt="Enterprise AI Engine Architecture"
+                  className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-brand-dark/85 backdrop-blur-md border border-white/15 flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 rounded-full bg-emerald-400 animate-ping" />
+                    <span className="text-xs font-bold text-gray-200">RAG Engine Active</span>
+                  </div>
+                  <span className="text-xs font-extrabold text-brand-accent bg-brand-accent/10 px-2.5 py-1 rounded-full border border-brand-accent/20">
+                    99.9% Vector Precision
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: Interactive Capabilities */}
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-accent/20 text-brand-accent text-xs font-bold uppercase tracking-wider">
+                <Zap className="w-4 h-4" /> Next-Gen Enterprise Infrastructure
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+                Proprietary AI Engine Architecture Built for Scale
+              </h2>
+              <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
+                We design resilient, enterprise-grade AI backbones that securely orchestrate private data, domain LLMs, and real-time execution pipelines with sub-second latency.
+              </p>
+
+              <div className="space-y-4 pt-2">
+                {[
+                  {
+                    title: "Autonomous Multi-Agent Swarms",
+                    desc: "Specialized AI agents executing complex multi-step workflows with human-in-the-loop oversight.",
+                  },
+                  {
+                    title: "Enterprise RAG & Hybrid Vector Search",
+                    desc: "Connect your enterprise knowledge base to customized LLMs with zero data leakage.",
+                  },
+                  {
+                    title: "Sub-100ms Inference Optimization",
+                    desc: "Quantized model deployments running on dedicated GPU clusters for maximum throughput.",
+                  },
+                  {
+                    title: "SOC 2 & HIPAA Compliant Enclaves",
+                    desc: "Isolated VPC environments with end-to-end data encryption in transit and at rest.",
+                  },
+                ].map((cap, idx) => (
+                  <div key={idx} className="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-brand-accent/40 transition-colors flex items-start gap-4">
+                    <div className="w-8 h-8 rounded-xl bg-brand-accent/20 text-brand-accent flex items-center justify-center shrink-0 mt-0.5">
+                      <Sparkles className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <h3 className="text-base font-bold text-white">{cap.title}</h3>
+                      <p className="text-xs text-gray-400 mt-1 leading-relaxed">{cap.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* TECH STACK */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -200,6 +272,61 @@ export default function AISolutionsPage() {
                 <p className="text-xs text-gray-500">{tech.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* INNOVATIVE SECTION 2: AI COMMAND & SPEED-TO-IMPACT ROADMAP */}
+      <section className="py-24 bg-brand-light border-y border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column: Text & Roadmap Steps */}
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-primary/10 text-brand-primary text-xs font-bold uppercase tracking-wider">
+                <Workflow className="w-4 h-4" /> Deployment Roadmap
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-dark">
+                From Proof of Concept to Production in 8 Weeks
+              </h2>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                Our battle-tested AI deployment framework eliminates risk and ensures rapid ROI with structured milestones and transparent validation gates.
+              </p>
+
+              <div className="space-y-4 pt-2">
+                {[
+                  { phase: "Phase 1: Wk 1-2", title: "Data Audit & Architecture Design", desc: "Security clearance, data pipeline mapping, and LLM model selection." },
+                  { phase: "Phase 2: Wk 3-4", title: "Custom Prototype & RAG Indexing", desc: "Build sandbox prototype, vector database ingestion, and fine-tuning." },
+                  { phase: "Phase 3: Wk 5-6", title: "Agent Integration & Stress Testing", desc: "API middleware connections, load testing, and edge case safety evaluation." },
+                  { phase: "Phase 4: Wk 7-8", title: "Production Launch & Continuous Monitoring", desc: "Full VPC deployment, telemetry dashboard setup, and operational handoff." },
+                ].map((step, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl bg-white border border-gray-200 shadow-sm hover:border-brand-primary transition-all flex items-start gap-4">
+                    <span className="px-3 py-1 rounded-lg bg-brand-primary text-white text-xs font-extrabold shrink-0 mt-0.5">
+                      {step.phase}
+                    </span>
+                    <div>
+                      <h3 className="text-base font-bold text-brand-dark">{step.title}</h3>
+                      <p className="text-xs text-gray-600 mt-1 leading-relaxed">{step.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right Column: AI Command Center Image */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-brand-primary via-brand-accent to-blue-600 rounded-3xl blur opacity-25 group-hover:opacity-60 transition duration-700" />
+              <div className="relative rounded-3xl overflow-hidden border border-gray-200 shadow-2xl bg-brand-dark">
+                <img
+                  src="/images/ai-command-center.png"
+                  alt="Enterprise AI Command Center HUD"
+                  className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="p-6 bg-brand-dark text-white space-y-2 border-t border-white/10">
+                  <div className="text-xs font-bold uppercase tracking-wider text-brand-accent">Live Telemetry Control HUD</div>
+                  <div className="text-sm font-semibold text-gray-300">Real-time model accuracy, latency tracking, and autonomous agent logs.</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

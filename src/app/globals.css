@@ -29,7 +29,7 @@
 }
 
 .hero-ai-bg {
-  background-image: linear-gradient(to right, rgba(9, 13, 22, 0.94) 0%, rgba(9, 13, 22, 0.82) 100%), url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=2000');
+  background-image: linear-gradient(to right, rgba(9, 13, 22, 0.90) 0%, rgba(9, 13, 22, 0.75) 100%), url('/images/hero-ai-bg.png');
   background-size: cover;
   background-position: center;
 }

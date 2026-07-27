@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -19,6 +19,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
   const { openModal } = useConsultationModal();
 
@@ -33,6 +34,17 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setServicesDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const serviceCards = [
@@ -108,11 +120,14 @@ export default function Navbar() {
 
             {/* Categorized Services Mega Dropdown */}
             <div
+              ref={dropdownRef}
               className="relative"
               onMouseEnter={() => setServicesDropdownOpen(true)}
               onMouseLeave={() => setServicesDropdownOpen(false)}
             >
               <button
+                type="button"
+                onClick={() => setServicesDropdownOpen((prev) => !prev)}
                 className={`px-4 py-2 text-sm font-semibold text-gray-300 hover:text-white flex items-center gap-1.5 transition-colors rounded-xl hover:bg-white/5 ${
                   servicesDropdownOpen ? "text-white bg-white/10" : ""
                 }`}
@@ -122,7 +137,7 @@ export default function Navbar() {
               </button>
 
               {servicesDropdownOpen && (
-                <div className="absolute top-full -left-24 w-[680px] pt-3 z-50">
+                <div className="absolute top-full -left-24 w-[680px] pt-1 z-50">
                   <div className="bg-brand-dark/95 backdrop-blur-2xl border border-white/15 rounded-3xl shadow-2xl p-5 grid grid-cols-2 gap-4">
                     {serviceCards.map((service, i) => {
                       const Icon = service.icon;

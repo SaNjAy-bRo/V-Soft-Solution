@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, CheckCircle2, ArrowRight, ShieldCheck, Clock, Sparkles } from "lucide-react";
 import confetti from "canvas-confetti";
@@ -20,6 +20,12 @@ export default function ConsultationModal({ isOpen, onClose, defaultService = "A
     service: defaultService,
     message: "",
   });
+
+  useEffect(() => {
+    if (isOpen && defaultService) {
+      setFormData((prev) => ({ ...prev, service: defaultService }));
+    }
+  }, [isOpen, defaultService]);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);

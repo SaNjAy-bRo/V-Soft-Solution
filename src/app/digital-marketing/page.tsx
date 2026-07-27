@@ -15,6 +15,7 @@ import {
   Sparkles,
   ArrowRight,
   ChevronDown,
+  Zap,
 } from "lucide-react";
 import { useConsultationModal } from "@/components/ui/ConsultationModalProvider";
 
@@ -168,6 +169,117 @@ export default function DigitalMarketingPage() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* INNOVATIVE SECTION 1: OMNICHANNEL GROWTH ARCHITECTURE */}
+      <section className="py-24 bg-brand-dark text-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column: Image Card with Revenue Dashboard */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-brand-accent rounded-3xl blur opacity-30 group-hover:opacity-75 transition duration-700" />
+              <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-brand-dark">
+                <img
+                  src="/images/marketing-growth-dashboard.png"
+                  alt="Digital Marketing Revenue Growth Dashboard"
+                  className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-brand-dark/85 backdrop-blur-md border border-white/15 flex items-center justify-between">
+                  <div className="space-y-0.5">
+                    <div className="text-[10px] uppercase font-bold text-gray-400">Average ROAS Engine</div>
+                    <div className="text-sm font-extrabold text-white">4.8x Pipeline Multiplier</div>
+                  </div>
+                  <span className="text-xs font-extrabold text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
+                    Live GA4 Tracking
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: 4 Growth Pillars */}
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-accent/20 text-brand-accent text-xs font-bold uppercase tracking-wider">
+                <Zap className="w-4 h-4" /> Omnichannel Growth Engine
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+                Engineering Predictable B2B & Enterprise Growth
+              </h2>
+              <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
+                We combine technical search optimization, targeted paid acquisition, high-converting creative assets, and automated lead scoring into a unified revenue machine.
+              </p>
+
+              <div className="space-y-4 pt-2">
+                {[
+                  { title: "Technical Organic Dominance", desc: "Top-tier search engine indexing, semantic content clusters, and high-DA backlink strategies." },
+                  { title: "Account-Based Marketing (ABM)", desc: "Hyper-targeted LinkedIn campaigns reaching verified decision-makers at target enterprise accounts." },
+                  { title: "High-ROAS Creative Testing Studio", desc: "Dynamic ad creative variations continuously optimized across Google Search, Display, and Meta." },
+                  { title: "Frictionless Conversion Optimization", desc: "A/B landing page testing and heatmapping that maximizes conversion rates per visitor." },
+                ].map((pillar, idx) => (
+                  <div key={idx} className="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-brand-accent/40 transition-colors flex items-start gap-4">
+                    <div className="w-8 h-8 rounded-xl bg-brand-accent/20 text-brand-accent flex items-center justify-center shrink-0 mt-0.5">
+                      <Sparkles className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <h3 className="text-base font-bold text-white">{pillar.title}</h3>
+                      <p className="text-xs text-gray-400 mt-1 leading-relaxed">{pillar.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* INNOVATIVE SECTION 2: ATTRIBUTION & MARKETING ROI MATRIX */}
+      <section className="py-24 bg-white border-y border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column: Text & Comparison Matrix */}
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-primary/10 text-brand-primary text-xs font-bold uppercase tracking-wider">
+                <BarChart3 className="w-4 h-4" /> Attribution & Transparency
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-dark">
+                360° Data Attribution: Zero Vanity Metrics
+              </h2>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                Most agencies report on clicks and impressions. We track actual dollar values, Cost Per Acquisition (CPA), and pipeline revenue generated in real-time.
+              </p>
+
+              <div className="space-y-4 pt-2">
+                {[
+                  { feature: "Full-Funnel Multi-Touch Tracking", desc: "Attribute conversions across first touchpoint, nurture emails, and final call bookings." },
+                  { feature: "Real-Time CAC & LTV Analytics", desc: "Live dashboards mapping exact Customer Acquisition Cost against Customer Lifetime Value." },
+                  { feature: "HubSpot & Salesforce Integration", desc: "Seamless bi-directional data flow connecting marketing ad spend directly to closed-won deals." },
+                ].map((item, idx) => (
+                  <div key={idx} className="p-5 rounded-2xl bg-brand-light border border-gray-200 hover:border-brand-primary transition-all space-y-1">
+                    <h3 className="text-base font-bold text-brand-dark flex items-center gap-2">
+                      <Sparkles className="w-4 h-4 text-brand-primary" /> {item.feature}
+                    </h3>
+                    <p className="text-xs text-gray-600 leading-relaxed pl-6">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right Column: Attribution HUD Graphic */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-brand-primary to-brand-accent rounded-3xl blur opacity-25 group-hover:opacity-60 transition duration-700" />
+              <div className="relative rounded-3xl overflow-hidden border border-gray-200 shadow-2xl bg-brand-dark">
+                <img
+                  src="/images/analytics-attribution-hud.png"
+                  alt="360 Data Attribution HUD"
+                  className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="p-6 bg-brand-dark text-white space-y-2 border-t border-white/10">
+                  <div className="text-xs font-bold uppercase tracking-wider text-brand-accent">Executive ROI Analytics Matrix</div>
+                  <div className="text-sm font-semibold text-gray-300">Live multi-channel revenue attribution dashboard updated every hour.</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
