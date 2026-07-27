@@ -92,31 +92,37 @@ export default function HomePage() {
       title: "15+ Years Industry Leadership",
       desc: "Senior partner-led engagements with deep domain expertise across North American and global enterprise markets.",
       icon: Award,
+      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=600",
     },
     {
       title: "Measurable Revenue Impact",
       desc: "Every engagement is anchored to verifiable business metrics—ROAS, Cost-Per-Acquisition, and operational savings.",
       icon: TrendingUp,
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600",
     },
     {
       title: "Enterprise Data Protection",
       desc: "SOC 2 Type II compliant standards, HIPAA-ready protocols, and strict ISO 27001 data governance.",
       icon: Lock,
+      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=600",
     },
     {
       title: "AI Innovation Pioneers",
       desc: "Early deployment of proprietary generative models, RAG vector architectures, and autonomous agent systems.",
       icon: Zap,
+      image: "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&q=80&w=600",
     },
     {
       title: "Scalable Cloud Engineering",
       desc: "Cloud-native microservice architectures engineered to support millions of concurrent interactions effortlessly.",
       icon: Globe2,
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=600",
     },
     {
       title: "24/7 Account & Tech Support",
       desc: "Dedicated senior consultants and 24/7 infrastructure monitoring for operational peace of mind.",
       icon: Headphones,
+      image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=600",
     },
   ];
 
@@ -350,12 +356,12 @@ export default function HomePage() {
       {/* WHY CHOOSE US */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
+          <div className="text-center max-w-2xl mx-auto space-y-3 mb-16">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-accent/10 text-brand-accent font-bold text-xs uppercase tracking-wider">
               The V Soft Advantage
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-dark">
-              Why Enterprise Leaders Partner With Us
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-dark tracking-tight">
+              Why Choose V Soft Solution
             </h2>
           </div>
 
@@ -365,17 +371,31 @@ export default function HomePage() {
               return (
                 <div
                   key={idx}
-                  className="p-8 rounded-3xl bg-brand-light border border-gray-200/80 hover:bg-white hover:shadow-xl hover:border-brand-accent/40 transition-all duration-300 space-y-4 group"
+                  className="bg-brand-light rounded-3xl overflow-hidden border border-gray-200/80 hover:bg-white hover:shadow-xl hover:border-brand-accent/40 transition-all duration-300 group flex flex-col justify-between"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-brand-dark text-brand-accent flex items-center justify-center group-hover:bg-brand-primary group-hover:text-white transition-colors">
-                    <Icon className="w-6 h-6" />
+                  <div className="space-y-4">
+                    {/* High-Res Photography Header */}
+                    <div className="relative h-44 overflow-hidden">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-transparent to-transparent" />
+                      <div className="absolute bottom-3 left-4 w-10 h-10 rounded-xl bg-brand-dark/90 backdrop-blur-md border border-white/10 text-brand-accent flex items-center justify-center group-hover:bg-brand-primary group-hover:text-white transition-colors">
+                        <Icon className="w-5 h-5" />
+                      </div>
+                    </div>
+
+                    <div className="px-6 pb-6 space-y-2">
+                      <h3 className="text-xl font-bold text-brand-dark group-hover:text-brand-primary transition-colors">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-600 text-xs leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-brand-dark">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {item.desc}
-                  </p>
                 </div>
               );
             })}
